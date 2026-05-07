@@ -1,9 +1,18 @@
 <template>
   <div class="home">
-    <h1>House Price Prediction</h1>
-
+        
     <!-- ✅ NEW: Welcome message -->
     <p class="welcome" v-if="username">Welcome, {{ username }}!</p>
+
+    <h2>House Price Prediction</h2>
+
+    <div v-if="predictStore.result !== null" class="result">
+
+    <h3>    
+    Predicted Price: $ {{ predictStore.result.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}
+    </h3>
+
+    </div>
 
     <form @submit.prevent="handlePredict">
       <div v-for="(value, key) in inputFeatures" :key="key" class="form-group">
@@ -23,14 +32,7 @@
       </button>
     </form>
 
-    <div v-if="predictStore.result !== null" class="result">
-
-    <h2>    
-    Predicted Price: $ {{ predictStore.result.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}
-    </h2>
-
-    </div>
-
+    
     <div v-if="predictStore.error" class="error">
       <p>Error: {{ predictStore.error }}</p>
     </div>

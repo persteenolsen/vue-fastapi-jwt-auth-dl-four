@@ -4,7 +4,7 @@ Vue 3 + Pinia - JWT Authentication towards a FastAPI Web API serving House Price
 
 # Last updated
 
-- 06-05-2026
+- 07-05-2026
 
 # Tech used for this Web Client
 
