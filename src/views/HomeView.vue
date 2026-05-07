@@ -136,6 +136,7 @@ button {
 }
 
 .welcome {
+  font-size: 1.4rem;
   text-align: center;
   margin-top: 0rem;
   color: orange;
