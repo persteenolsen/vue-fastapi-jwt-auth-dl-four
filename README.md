@@ -50,8 +50,8 @@ A Vue 3 frontend using Pinia for state management and JWT authentication, design
 
 # ⚙️ Installation
 
-git clone https://github.com/persteenolsen/vue-3-pinia-jwt-auth-dl-four.git
-cd vue-3-pinia-jwt-auth-dl-four
+git clone https://github.com/persteenolsen/vue-fastapi-jwt-auth-dl-four.git
+cd vue-fastapi-jwt-auth-dl-four
 npm install
 
 Verify setup:
