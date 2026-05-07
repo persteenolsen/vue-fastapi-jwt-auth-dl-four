@@ -4,7 +4,7 @@
     <!-- ✅ NEW: Welcome message -->
     <p class="welcome" v-if="username">Welcome, {{ username }}!</p>
 
-    <h2>House Price Prediction</h2>
+    <h3>House Price Prediction</h3>
 
     <div v-if="predictStore.result !== null" class="result">
 
@@ -23,7 +23,8 @@
      <button type="submit" :disabled="predictStore.loading">
         {{ predictStore.loading ? "Predicting..." : "Predict Price" }}
       </button>
-
+      <br />
+      
       <div v-for="(value, key) in inputFeatures" :key="key" class="form-group">
         <label :for="key">{{ key.replace(/_/g, ' ') }}:</label>
         <input
