@@ -1,9 +1,10 @@
 <template>
-  <div class="home">
-        
-    <!-- ✅ NEW: Welcome message -->
-    <div class="welcome" v-if="username">Welcome, {{ username }}!</div>
+ 
+  <!-- ✅ Welcome message -->
+  <div class="welcome" v-if="username">Welcome, {{ username }}!</div>
 
+ <div class="home">
+        
     <h3>House Price Prediction</h3>
 
     <div v-if="predictStore.result !== null" class="result">
@@ -50,16 +51,16 @@
 import { reactive } from 'vue';
 import { usePredictStore } from '@/stores/predict.store';
 
-import { useAuthStore } from '@/stores'; // ✅ NEW: import auth store
+import { useAuthStore } from '@/stores'; // ✅ Import auth store
 
 export default {
   name: "Home",
   setup() {
     const predictStore = usePredictStore();
 
-    const authStore = useAuthStore(); // ✅ NEW: get auth store
+    const authStore = useAuthStore(); // ✅ Get auth store
 
-    // ✅ NEW: reactive username for welcome
+    // ✅ Reactive username for welcome
     const username = authStore.user?.username || 'Guest';
 
     // All 7 features as floats and within Pydantic constraints
@@ -135,7 +136,8 @@ button {
 }
 
 .welcome {
-  margin-top: 2rem;
+  text-align: center;
+  margin-top: 0rem;
   color: orange;
 }
 
