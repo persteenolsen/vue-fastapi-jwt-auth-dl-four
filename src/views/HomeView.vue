@@ -2,7 +2,7 @@
   <div class="home">
         
     <!-- ✅ NEW: Welcome message -->
-    <p class="welcome" v-if="username">Welcome, {{ username }}!</p>
+    <div class="welcome" v-if="username">Welcome, {{ username }}!</div>
 
     <h3>House Price Prediction</h3>
 
@@ -11,7 +11,7 @@
        <h3>    
          Predicted Price: $ {{ predictStore.result.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}
        </h3>
-    
+       <br />
     </div>
        
     <div v-if="predictStore.error" class="error">
@@ -23,6 +23,7 @@
      <button type="submit" :disabled="predictStore.loading">
         {{ predictStore.loading ? "Predicting..." : "Predict Price" }}
       </button>
+      
       <br /><br />
       
       <div v-for="(value, key) in inputFeatures" :key="key" class="form-group">
@@ -134,6 +135,7 @@ button {
 }
 
 .welcome {
+  margin-top: 2rem;
   color: orange;
 }
 

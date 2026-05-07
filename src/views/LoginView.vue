@@ -20,7 +20,7 @@ function onSubmit(values, { setErrors }) {
 
 <template>
     <div>
-        <h3>Predict House Prices Instantly - Powered by Vue 3, FastAPI & AI!</h3>
+        <h3>Predict House Prices Instantly - Powered by Vue, FastAPI and AI</h3>
         
         <br/><br />
         Last updated: 07-05-2026<br /><br />
