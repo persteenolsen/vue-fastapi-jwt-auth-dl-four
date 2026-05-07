@@ -8,13 +8,22 @@
 
     <div v-if="predictStore.result !== null" class="result">
 
-    <h3>    
-    Predicted Price: $ {{ predictStore.result.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}
-    </h3>
-
+       <h3>    
+         Predicted Price: $ {{ predictStore.result.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}
+       </h3>
+    
+    </div>
+       
+    <div v-if="predictStore.error" class="error">
+      <p>Error: {{ predictStore.error }}</p>
     </div>
 
     <form @submit.prevent="handlePredict">
+
+     <button type="submit" :disabled="predictStore.loading">
+        {{ predictStore.loading ? "Predicting..." : "Predict Price" }}
+      </button>
+
       <div v-for="(value, key) in inputFeatures" :key="key" class="form-group">
         <label :for="key">{{ key.replace(/_/g, ' ') }}:</label>
         <input
@@ -27,15 +36,9 @@
         />
       </div>
 
-      <button type="submit" :disabled="predictStore.loading">
-        {{ predictStore.loading ? "Predicting..." : "Predict Price" }}
-      </button>
+     
     </form>
 
-    
-    <div v-if="predictStore.error" class="error">
-      <p>Error: {{ predictStore.error }}</p>
-    </div>
 
 
   </div>
@@ -130,7 +133,7 @@ button {
 }
 
 .welcome {
-  color: green;
+  color: orange;
 }
 
 </style>
