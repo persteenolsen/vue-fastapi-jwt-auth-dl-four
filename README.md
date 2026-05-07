@@ -1,44 +1,107 @@
-# vue-3-pinia-jwt-auth-dl-four
+# 🏠 vue-fastapi-jwt-auth-dl-four
 
-Vue 3 + Pinia - JWT Authentication towards a FastAPI Web API serving House Price Prediction with PyTorch
+Last updated: 07-05-2026
 
-# Last updated
+A Vue 3 frontend using Pinia for state management and JWT authentication, designed to interact with the FastAPI House Price Prediction API. This project demonstrates a full frontend setup: SPA architecture → authentication → form validation → API integration → local development → production build.
 
-- 07-05-2026
+# FastAPI Backend
 
-# Tech used for this Web Client
+- [`House Price Prediction API`](https://github.com/persteenolsen/vue-fastapi-jwt-auth-dl-four) - The backend API using FastAPI, PyTorch, and JWT authentication.
 
-- Node.js version 18.19.1
-- Volta for Node Version management
-- Vue 3 is the JS framework for this frontend
-- Pinia for state management
-- ESLint for analysing the .JS code
-- Vee-validate for validation
-- Yup for validation
-- vite v2.9.16 Dev Server
-- VS Code is my developement tool
+# 🔐 Features
 
-# Installing
+- Vue 3 SPA architecture
+- Pinia for global state management
+- JWT authentication with secure token storage
+- Form validation using Vee-validate + Yup
+- API integration with secure REST endpoints
+- Development server with Vite
+- Production-ready build and preview
+- Easy deployment to static hosting
 
-- Make sure you have a new version of Node installed
-- Download the code by zip or fork
-- Run the command npm install by the command promt
+# 🧱 Tech Stack
 
-# Development server:
+- Node.js 18.19.1
+- Vue 3
+- Pinia
+- Vee-validate + Yup
+- Vite 2.9.16
+- ESLint
+- VS Code
 
-- npm run dev
+# 📁 Project Structure
 
-- You can view the development server at `localhost:3000`
+```
+.
+├── index.html             # SPA entry point
+├── package.json           # Node dependencies + scripts
+├── vite.config.js         # Vite config
+├── src
+│   ├── main.js            # Vue app entry point
+│   ├── App.vue            # Root component
+│   ├── components         # Vue components
+│   ├── views              # Pages
+│   ├── store              # Pinia stores (JWT auth)
+│   ├── services           # API calls
+│   └── validation         # Yup/Vee-validate schemas
+├── public                 # Static assets
+└── .env                   # Environment variables (API URL)
+```
 
-# Production build:
+# ⚙️ Installation
 
-- npm run build
+git clone https://github.com/persteenolsen/vue-3-pinia-jwt-auth-dl-four.git
+cd vue-3-pinia-jwt-auth-dl-four
+npm install
 
-# Preview before Publish / Deployment
+Verify setup:
 
-- npm run preview
+npm run dev
 
-- You can view the preview production built at `localhost:5050`
+Open the app in the browser:
 
+http://localhost:3000
 
+# 🚀 Development Server
 
+- Start with `npm run dev`
+- Accessible at `http://localhost:3000`
+
+# 📦 Production Build
+
+- Run `npm run build` to create a production build
+
+# 👀 Preview Production Build
+
+- Run `npm run preview`
+- Preview the production build locally at `http://localhost:5050`
+
+# 🔐 Environment Variables (.env)
+
+VITE_API_URL=http://127.0.0.1:8000
+
+# 🧪 Usage
+
+1. Start the FastAPI backend
+2. Start the Vue frontend (`npm run dev`)
+3. Register/login through the SPA
+4. Enter house features in the prediction form
+5. Submit to receive predicted house price from the API
+
+# 📡 API Integration
+
+- POST `/login` → returns JWT token
+- GET/POST to `/predict` using JWT for authentication
+- Token stored in Pinia store and localStorage for session persistence
+
+# 🧠 Key Design Features
+
+- Global Pinia store for JWT auth
+- Secure API calls with Axios interceptors
+- Form validation with Vee-validate + Yup
+- Environment-based API URL configuration
+- SPA routing for authenticated and public pages
+
+# 👨‍💻 Author
+
+Built as a frontend SPA demonstrating secure JWT authentication, state management with Pinia, and integration with a production-style FastAPI ML API backend.
