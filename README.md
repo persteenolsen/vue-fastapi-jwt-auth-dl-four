@@ -6,7 +6,7 @@ A Vue 3 frontend using Pinia for state management and JWT authentication, design
 
 # FastAPI Backend
 
-- [`House Price Prediction API`](https://github.com/persteenolsen/vue-fastapi-jwt-auth-dl-four) - The backend API using FastAPI, PyTorch, and JWT authentication.
+- [`House Price Prediction API`](https://github.com/persteenolsen/fastapi-jwt-auth-dl-four) - The backend API using FastAPI, PyTorch, and JWT authentication.
 
 # 🔐 Features
 
