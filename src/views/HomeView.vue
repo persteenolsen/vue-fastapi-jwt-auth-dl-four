@@ -23,7 +23,7 @@
      <button type="submit" :disabled="predictStore.loading">
         {{ predictStore.loading ? "Predicting..." : "Predict Price" }}
       </button>
-      <br />
+      <br /><br />
       
       <div v-for="(value, key) in inputFeatures" :key="key" class="form-group">
         <label :for="key">{{ key.replace(/_/g, ' ') }}:</label>
