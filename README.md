@@ -1,8 +1,10 @@
 # 🏠 vue-fastapi-jwt-auth-dl-four
 
-Last updated: 07-05-2026
+Last updated: 08-05-2026
 
-A Vue 3 frontend using Pinia for state management and JWT authentication, designed to interact with the FastAPI House Price Prediction API. This project demonstrates a full frontend setup: SPA architecture → authentication → form validation → API integration → local development → production build.
+A Vue 3 frontend using Pinia for state management and JWT authentication, designed to interact with the FastAPI House Price Prediction API. This project demonstrates a full frontend setup: 
+
+SPA architecture → authentication → form validation → API integration → local development → production build
 
 # FastAPI Backend
 
