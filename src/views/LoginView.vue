@@ -23,7 +23,7 @@ function onSubmit(values, { setErrors }) {
         <h3>Predict House Prices by FastAPI, Vue & AI</h3>
         
         <br/><br />
-        Last updated: 22-08-2026<br /><br />
+        Last updated: 27-08-2026<br /><br />
         <div class="alert alert-info">
 
             Username: testuser<br />
